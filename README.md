@@ -1,5 +1,5 @@
 
-##README##
+**README**
 
 This repository contains a complete Python script that simulates a Security Orchestration, Automation, and Response (SOAR) workflow. It ingests security alerts, performs enrichment, calculates a weighted threat score, applies allowlist suppression, tags incidents with MITRE ATT&CK techniques, determines a final severity bucket, and generates structured output files (JSON, Markdown, and a log).
 
