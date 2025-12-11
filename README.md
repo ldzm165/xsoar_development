@@ -15,7 +15,7 @@ Clone the project to your local machine:
 
 ```
 Bash
-git clone <YOUR_GITHUB_REPO_URL>
+git clone https://github.com/ldzm165/xsoar_development.git
 
 cd xsoar_development
 ```
