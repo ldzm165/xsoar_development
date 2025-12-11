@@ -1,0 +1,113 @@
+{
+    "incident_id": "sumo-abc",
+    "source_alert": {
+        "alert_id": "sumo-abc",
+        "source": "sumologic",
+        "type": "Beaconing",
+        "created_at": "2025-08-21T08:11:54Z",
+        "asset": {
+            "device_id": "dev-4421",
+            "hostname": "ENG-DESKTOP-07",
+            "ip": "10.9.5.23"
+        },
+        "indicators": {
+            "ipv4": [
+                "5.6.7.8"
+            ],
+            "domains": [],
+            "urls": [
+                "http://cnc.evil.example/ping"
+            ],
+            "sha256": []
+        },
+        "raw": {
+            "collector": "edge-4",
+            "rule_id": "SM-BEACON-12"
+        }
+    },
+    "asset": {
+        "device_id": "dev-4421",
+        "hostname": "ENG-DESKTOP-07",
+        "ip": "10.9.5.23"
+    },
+    "indicators": [
+        {
+            "type": "ipv4",
+            "value": "5.6.7.8",
+            "allowlisted": false
+        },
+        {
+            "type": "urls",
+            "value": "http://cnc.evil.example/ping",
+            "allowlisted": false
+        }
+    ],
+    "triage": {
+        "severity": 65,
+        "bucket": "Medium",
+        "tags": [
+            "T1071",
+            "T1595"
+        ],
+        "suppressed": false
+    },
+    "mitre": {
+        "techniques": [
+            "T1595",
+            "T1071"
+        ]
+    },
+    "actions": [],
+    "timeline": [
+        {
+            "stage": "ingest",
+            "ts": "2025-12-10T20:15:14.093132",
+            "details": "Starting ingestion process."
+        },
+        {
+            "stage": "ingest",
+            "ts": "2025-12-10T20:15:14.093223",
+            "details": "Starting normalization."
+        },
+        {
+            "stage": "ingest",
+            "ts": "2025-12-10T20:15:14.093229",
+            "details": "Normalization complete."
+        },
+        {
+            "stage": "enrich",
+            "ts": "2025-12-10T20:15:14.093230",
+            "details": "Starting threat intelligence enrichment."
+        },
+        {
+            "stage": "enrich",
+            "ts": "2025-12-10T20:15:14.093326",
+            "details": "Threat intelligence enrichment complete."
+        },
+        {
+            "stage": "triage",
+            "ts": "2025-12-10T20:15:14.093327",
+            "details": "Starting allowlist processing."
+        },
+        {
+            "stage": "triage",
+            "ts": "2025-12-10T20:15:14.094318",
+            "details": "Calculating final severity score."
+        },
+        {
+            "stage": "triage",
+            "ts": "2025-12-10T20:15:14.094322",
+            "details": "Score clamped to 65."
+        },
+        {
+            "stage": "respond",
+            "ts": "2025-12-10T20:15:14.094323",
+            "details": "Checking conditional isolation requirement."
+        },
+        {
+            "stage": "respond",
+            "ts": "2025-12-10T20:15:14.094325",
+            "details": "Isolation conditions not met."
+        }
+    ]
+}
